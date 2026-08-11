@@ -7,7 +7,7 @@ Welcome to the hardware and electronics repository for **The Protein Pal**, an a
 
 
 
-# Hardware Subsystem Scope & Ownership
+# Hardware description 
 
 Our ECE team owns the complete physical execution, power distribution, and telemetry backbone of the machine. The core subsystems include:
 
@@ -17,7 +17,16 @@ Our ECE team owns the complete physical execution, power distribution, and telem
 
 
 # Block Diagram of system 
+[ Power Management ] (12V / 5V DC Rails)
+│
+▼
+[ Sensors Subsystem ] ──► [ Raspberry Pi 4 (2GB) ] ──► [ Actuator Subsystem ]
 
+Load Cells (HX711)      (Linux / Python / MQTT)     - Stepper Drivers & Augers
+
+Flow Meters (Water)                                 - Solenoids & Water Pumps
+
+Cup IR & Door Interlocks                            - LED Ring & Buzzer
 
 [ Power Management ] (12V / 5V DC Rails)
        │
